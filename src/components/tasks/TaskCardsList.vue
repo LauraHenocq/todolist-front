@@ -8,14 +8,14 @@ type Props = {
 
 defineProps<Props>()
 
-const emit = defineEmits(['task-clicked', 'delete-task']);
-
-const emitTaskClicked = (taskId: string) => {
-  emit('task-clicked', taskId)
-};
+const emit = defineEmits(['delete-task', 'go-to-task']);
 
 const deleteTask = (taskId: string) => {
   emit('delete-task', taskId);
+}
+
+const goToTask = (taskId: string) => {
+  emit('go-to-task', taskId);
 }
 
 </script>
@@ -24,7 +24,7 @@ const deleteTask = (taskId: string) => {
 <v-container>
     <v-row>
       <v-col v-for="task in tasks" :key="task.id" cols="12" md="6">
-        <TaskCard :task="task" @deleteTask="deleteTask"/>
+        <TaskCard :task="task" @deleteTask="deleteTask" @editTask="goToTask" @goToTask="goToTask"/>
       </v-col>
     </v-row>
   </v-container>

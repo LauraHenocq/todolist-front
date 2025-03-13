@@ -1,19 +1,48 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import { TaskStatus, TaskEntity } from '@/models/task.entity';
+
+type Props = {
+  isEditionMode: Boolean,
+  task?: TaskEntity | null
+}
+
+const { isEditionMode, task } = defineProps<Props>()
 
 const isValid = ref(false);
 
+const statusItems = [
+  {
+    label: 'A faire',
+    value: TaskStatus.TODO,
+  },
+  {
+    label: 'En cours',
+    value: TaskStatus.IN_PROGRESS,
+  },
+  {
+    label: 'Terminée',
+    value: TaskStatus.DONE,
+  }
+]
+
 const formData = ref({
-  title: '',
-  description: '',
+  title: task ? task.title : '',
+  description: task ? task.description : '',
+  status: task ? task.status : undefined
 });
 
-const emit = defineEmits(['create-task']);
+const emit = defineEmits(['create-task', 'update-task']);
 
 const submitForm = () => {
   if (isValid.value) {
-    emit('create-task', formData.value);
-    formData.value = { title: '', description: '' };
+    if (isEditionMode) {
+      emit('update-task', formData.value);
+    } else {
+      emit('create-task', { title: formData.value.title, description: formData.value.description });
+    }
+
+    formData.value = { title: '', description: '', status: task ? task.status : undefined };
   }
 };
 
@@ -77,6 +106,20 @@ const descriptionRules = computed(() => {
             label="Description"
             required
           ></v-text-field>
+        </v-col>
+
+        <v-col
+          v-if="isEditionMode"
+          cols="12"
+          md="4"
+        >
+        <v-select
+          v-model="formData.status"
+          label="Statut"
+          item-title="label"
+          item-value="value"
+          :items="statusItems"
+        ></v-select>
         </v-col>
       </v-row>
     </v-container>

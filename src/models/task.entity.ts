@@ -25,18 +25,18 @@ export class TaskEntity {
     this.id = props.id;
     this.title = props.title;
     this.description = props.description;
-    this._status = props.status;
+    this._status = props._status;
   }
 
   
   static fromApi(apiProps: TaskEntityApiProps): TaskEntity {
     return new TaskEntity({
       ...apiProps,
-      status: TaskStatus[apiProps._status]
+      status: apiProps.status
     });
   }
 
-  public get status(): TaskStatus {
+  get status(): TaskStatus {
     return this._status;
   }
   

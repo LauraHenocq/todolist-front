@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import TaskForm from '@/components/forms/TaskForm.vue';
-import type { CreateTaskInput } from "@/services/inputs/create-task.input";
+import type { UpdateTaskInput } from "@/services/inputs/update-task.input";
 import { computed, ref, watch } from 'vue';
+import { TaskEntity } from '@/models/task.entity';
 
 type Props = {
-  isOpen: boolean
+  isOpen: boolean,
+  task: TaskEntity
 }
 
 const { isOpen } = defineProps<Props>()
@@ -22,14 +24,14 @@ const submitForm = () => {
   }
 };
 
-const emit = defineEmits(['create-task', 'cancel']);
+const emit = defineEmits(['update-task', 'cancel']);
 
 const cancel = () => {
   emit('cancel');
 }
 
-const createTask = (newTask: CreateTaskInput) => {
-  emit('create-task', newTask);
+const updateTask = (newTask: UpdateTaskInput) => {
+  emit('update-task', newTask);
   isDialogOpen.value = false;
 }
 
@@ -37,8 +39,8 @@ const createTask = (newTask: CreateTaskInput) => {
 
 <template>
   <v-dialog v-model="isDialogOpen" width="90%">
-      <v-card title="Créer une nouvelle tâche">
-        <TaskForm ref="formRef" @createTask="createTask"/>
+      <v-card title="Modifier la tâche">
+        <TaskForm is-edition-mode="true" :task="task" ref="formRef" @updateTask="updateTask"/>
 
         <v-card-actions>
           <v-spacer></v-spacer>
