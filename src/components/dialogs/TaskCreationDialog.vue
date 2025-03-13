@@ -43,10 +43,12 @@ const createTask = (newTask: CreateTaskInput) => {
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
+            data-cy="cancel-creation-task-button"
             text="Annuler"
             @click="cancel"
           ></v-btn>
           <v-btn
+            data-cy="validate-creation-task-button"
             text="Valider"
             @click="submitForm"
           ></v-btn>

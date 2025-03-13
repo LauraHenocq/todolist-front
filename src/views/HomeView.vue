@@ -53,8 +53,9 @@ const createTask = async (createTaskInput: CreateTaskInput) => {
       text: 'Une erreur est survenue lors de la création de la tâche, réessaie.',
       type: 'error'
     };
-    isLoading.value = false;
     isAlertVisible.value = true;
+  } finally {
+    isLoading.value = false;
   }
   
   closeTaskCreationDialog();
@@ -94,8 +95,9 @@ const deleteTask = async (taskId: string) => {
       text: 'Une erreur est survenue lors de la suppression de la tâche, réessaie.',
       type: 'error'
     };
-    isLoading.value = false;
     isAlertVisible.value = true;
+  } finally {
+    isLoading.value = false;
   }
   closeTaskDeletionDialog();
 }

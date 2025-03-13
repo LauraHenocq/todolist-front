@@ -54,8 +54,9 @@ const updateTask = async (updateTaskInput: UpdateTaskInput) => {
       text: 'Une erreur est survenue lors de la mise à jour de la tâche, réessaie.',
       type: 'error'
     };
-    isLoading.value = false;
     isAlertVisible.value = true;
+  } finally {
+    isLoading.value = false;
   }
   
   closeTaskEditionDialog();

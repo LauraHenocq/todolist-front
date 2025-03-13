@@ -1,11 +1,5 @@
 <script setup lang="ts">
-
-const enum AlertType {
-  success = 'success',
-  warning = 'warning',
-  error = 'error',
-  info = 'info'
-}
+import AlertType from '@/types/alert-type.ts';
 
 type Props = {
   type: AlertType
@@ -26,6 +20,7 @@ const handleClose = () => {
 </script>
 <template>
   <v-alert
+    data-cy="alert"
     class="alert"
     :type="type"
     :title="title"

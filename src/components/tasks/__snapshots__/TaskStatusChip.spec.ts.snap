@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TaskStatusChip > render > should render 1`] = `
+"<span class="v-chip v-theme--light bg-red v-chip--density-default v-chip--size-default v-chip--variant-flat" draggable="false"><!----><span class="v-chip__underlay"></span>
+<!---->
+<!---->
+<div class="v-chip__content" data-no-activator="">A faire</div>
+<!---->
+<!----></span>"
+`;

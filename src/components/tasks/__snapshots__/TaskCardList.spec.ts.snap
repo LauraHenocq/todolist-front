@@ -1,0 +1,94 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TaskCardsList > render > should render 1`] = `
+"<div class="v-container v-locale--is-ltr">
+  <div class="v-row">
+    <div class="v-col-md-6 v-col-12">
+      <div data-v-1a4c953a="" class="v-card v-theme--light v-card--density-default v-card--variant-elevated">
+        <!---->
+        <div class="v-card__loader">
+          <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top: 0px; height: 0px; --v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+            <!---->
+            <div class="v-progress-linear__background"></div>
+            <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+            <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+              <div class="v-progress-linear__indeterminate">
+                <div class="v-progress-linear__indeterminate long"></div>
+                <div class="v-progress-linear__indeterminate short"></div>
+              </div>
+            </transition-stub>
+            <!---->
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <div data-v-1a4c953a="" data-cy="task-card" class="task-card">
+          <div data-v-1a4c953a="" class="v-card-title"><span data-v-1a4c953a="" class="headline">Titre de la tâche 1</span></div>
+          <div data-v-1a4c953a="" class="v-card-subtitle"><span data-v-1a4c953a="">Description de la tâche 1</span></div>
+          <div data-v-1a4c953a="" class="v-card-text"><span data-v-1a4c953a="" class="v-chip v-theme--light bg-red v-chip--density-default v-chip--size-default v-chip--variant-flat" draggable="false"><!----><span class="v-chip__underlay"></span>
+            <!---->
+            <!---->
+            <div class="v-chip__content" data-no-activator="">A faire</div>
+            <!---->
+            <!----></span>
+          </div>
+        </div>
+        <div data-v-1a4c953a="" class="v-card-actions"><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-edit-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Modifier</span>
+            <!---->
+            <!---->
+          </button><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-delete-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Supprimer</span>
+            <!---->
+            <!---->
+          </button></div>
+        <!---->
+        <!----><span class="v-card__underlay"></span>
+      </div>
+    </div>
+    <div class="v-col-md-6 v-col-12">
+      <div data-v-1a4c953a="" class="v-card v-theme--light v-card--density-default v-card--variant-elevated">
+        <!---->
+        <div class="v-card__loader">
+          <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top: 0px; height: 0px; --v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+            <!---->
+            <div class="v-progress-linear__background"></div>
+            <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+            <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+              <div class="v-progress-linear__indeterminate">
+                <div class="v-progress-linear__indeterminate long"></div>
+                <div class="v-progress-linear__indeterminate short"></div>
+              </div>
+            </transition-stub>
+            <!---->
+          </div>
+        </div>
+        <!---->
+        <!---->
+        <div data-v-1a4c953a="" data-cy="task-card" class="task-card">
+          <div data-v-1a4c953a="" class="v-card-title"><span data-v-1a4c953a="" class="headline">Titre de la tâche 2</span></div>
+          <div data-v-1a4c953a="" class="v-card-subtitle"><span data-v-1a4c953a="">Description de la tâche 2</span></div>
+          <div data-v-1a4c953a="" class="v-card-text"><span data-v-1a4c953a="" class="v-chip v-theme--light bg-red v-chip--density-default v-chip--size-default v-chip--variant-flat" draggable="false"><!----><span class="v-chip__underlay"></span>
+            <!---->
+            <!---->
+            <div class="v-chip__content" data-no-activator="">A faire</div>
+            <!---->
+            <!----></span>
+          </div>
+        </div>
+        <div data-v-1a4c953a="" class="v-card-actions"><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-edit-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Modifier</span>
+            <!---->
+            <!---->
+          </button><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-delete-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Supprimer</span>
+            <!---->
+            <!---->
+          </button></div>
+        <!---->
+        <!----><span class="v-card__underlay"></span>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

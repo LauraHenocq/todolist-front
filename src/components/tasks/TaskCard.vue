@@ -26,7 +26,7 @@ const goToTask = () => {
 </script>
 <template>
   <v-card>
-    <div class="task-card" @click="goToTask">
+    <div data-cy="task-card" class="task-card" @click="goToTask">
       <v-card-title>
         <span class="headline">{{ task.title }}</span>
       </v-card-title>
@@ -38,8 +38,8 @@ const goToTask = () => {
       </v-card-text>
     </div>
     <v-card-actions>
-      <v-btn text @click="editTask(task)">Modifier</v-btn>
-      <v-btn text @click="deleteTask(task.id)">Supprimer</v-btn>
+      <v-btn data-cy="task-card-edit-task-button" text @click="editTask(task)">Modifier</v-btn>
+      <v-btn data-cy="task-card-delete-task-button" text @click="deleteTask(task.id)">Supprimer</v-btn>
     </v-card-actions>
   </v-card>
 </template>

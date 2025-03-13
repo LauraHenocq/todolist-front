@@ -27,9 +27,9 @@ const statusItems = [
 ]
 
 const formData = ref({
-  title: task ? task.title : '',
-  description: task ? task.description : '',
-  status: task ? task.status : undefined
+  title: task && isEditionMode ? task.title : '',
+  description: task &&  isEditionMode ? task.description : '',
+  status: task && isEditionMode ? task.status : undefined
 });
 
 const emit = defineEmits(['create-task', 'update-task']);
@@ -81,7 +81,7 @@ const descriptionRules = computed(() => {
 </script>
 
 <template>
-  <v-form v-model="isValid" ref="formRef" @submit.prevent>
+  <v-form data-cy="task-form" v-model="isValid" ref="formRef" @submit.prevent>
     <v-container>
       <v-row>
         <v-col
@@ -89,6 +89,7 @@ const descriptionRules = computed(() => {
           md="4"
         >
           <v-text-field
+            data-cy="task-form-title-field"
             v-model="formData.title"
             :rules="titleRules"
             label="Titre"
@@ -101,6 +102,7 @@ const descriptionRules = computed(() => {
           md="4"
         >
           <v-text-field
+            data-cy="task-form-description-field"
             v-model="formData.description"
             :rules="descriptionRules"
             label="Description"
