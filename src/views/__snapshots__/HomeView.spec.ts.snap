@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomeView > render > should render 1`] = `
+"<main>
+  <div class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr app">
+    <div class="v-application__wrap">
+      <div>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <div class="v-container v-locale--is-ltr"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-pink v-btn--density-default v-btn--size-default v-btn--variant-elevated"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Ajouter une tâche</span>
+            <!---->
+            <!---->
+          </button></div>
+        <!--v-if-->
+        <div class="v-card v-theme--light v-card--density-default v-card--variant-elevated mx-auto" style="width: 90%;">
+          <!---->
+          <div class="v-card__loader">
+            <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top: 0px; height: 0px; --v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+              <!---->
+              <div class="v-progress-linear__background"></div>
+              <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+              <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+                <div class="v-progress-linear__indeterminate">
+                  <div class="v-progress-linear__indeterminate long"></div>
+                  <div class="v-progress-linear__indeterminate short"></div>
+                </div>
+              </transition-stub>
+              <!---->
+            </div>
+          </div>
+          <!---->
+          <!---->
+          <header class="v-toolbar v-toolbar--density-default bg-pink v-theme--light v-locale--is-ltr">
+            <!---->
+            <div class="v-toolbar__content" style="height: 64px;">
+              <!---->
+              <!---->
+              <div class="v-toolbar-title">
+                <div class="v-toolbar-title__placeholder">
+                  <!---->Ma liste de tâches
+                </div>
+              </div>
+              <div class="v-spacer"></div>
+              <!---->
+            </div>
+            <transition-stub name="expand-transition" appear="false" persisted="false" css="true">
+              <!---->
+            </transition-stub>
+          </header>
+          <div class="v-container v-locale--is-ltr">
+            <div class="v-row">
+              <div class="v-col-md-6 v-col-12">
+                <div data-v-1a4c953a="" class="v-card v-theme--light v-card--density-default v-card--variant-elevated">
+                  <!---->
+                  <div class="v-card__loader">
+                    <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top: 0px; height: 0px; --v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+                      <!---->
+                      <div class="v-progress-linear__background"></div>
+                      <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+                      <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+                        <div class="v-progress-linear__indeterminate">
+                          <div class="v-progress-linear__indeterminate long"></div>
+                          <div class="v-progress-linear__indeterminate short"></div>
+                        </div>
+                      </transition-stub>
+                      <!---->
+                    </div>
+                  </div>
+                  <!---->
+                  <!---->
+                  <div data-v-1a4c953a="" data-cy="task-card" class="task-card">
+                    <div data-v-1a4c953a="" class="v-card-title"><span data-v-1a4c953a="" class="headline">Task Title</span></div>
+                    <div data-v-1a4c953a="" class="v-card-subtitle"><span data-v-1a4c953a="">Task Description</span></div>
+                    <div data-v-1a4c953a="" class="v-card-text"><span data-v-1a4c953a="" class="v-chip v-theme--light bg-red v-chip--density-default v-chip--size-default v-chip--variant-flat" draggable="false"><!----><span class="v-chip__underlay"></span>
+                      <!---->
+                      <!---->
+                      <div class="v-chip__content" data-no-activator="">A faire</div>
+                      <!---->
+                      <!----></span>
+                    </div>
+                  </div>
+                  <div data-v-1a4c953a="" class="v-card-actions"><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-edit-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+                      <!----><span class="v-btn__content" data-no-activator="">Modifier</span>
+                      <!---->
+                      <!---->
+                    </button><button data-v-1a4c953a="" type="button" class="v-btn v-btn--slim v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" data-cy="task-card-delete-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+                      <!----><span class="v-btn__content" data-no-activator="">Supprimer</span>
+                      <!---->
+                      <!---->
+                    </button></div>
+                  <!---->
+                  <!----><span class="v-card__underlay"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---->
+          <!----><span class="v-card__underlay"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>"
+`;
+
+exports[`HomeView > render > should show loading spinner when data is loading 1`] = `
+"<main>
+  <div class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr app">
+    <div class="v-application__wrap">
+      <div>
+        <div class="v-progress-circular v-progress-circular--indeterminate v-theme--light v-progress-circular--size-default text-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100"><svg style="transform: rotate(calc(-90deg + 0deg));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.714285714285715 45.714285714285715">
+            <circle class="v-progress-circular__underlay" fill="transparent" cx="50%" cy="50%" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.66370614359172" stroke-dashoffset="0"></circle>
+            <circle class="v-progress-circular__overlay" fill="transparent" cx="50%" cy="50%" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.66370614359172" stroke-dashoffset="125.66370614359172px"></circle>
+          </svg>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>"
+`;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { describe, beforeEach, expect, it, vi } from 'vitest'
 import { getTasks, getTask, createTask, updateTask, deleteTask } from './tasks.service'
-import { TaskEntity, TaskStatus } from '@/models/task.entity'
+import { TaskStatus } from '@/models/task.entity'
 
 vi.mock('axios');
 
@@ -13,10 +13,10 @@ describe('TaskService', () => {
   })
 
   describe('getTasks', () => {
-    it('should return an array of task entities when the call succeed', async () => {
+    it('should return an array of tasks when the call succeed', async () => {
       (axios.get as vi.Mock).mockResolvedValue({ data: [mockTask] });
 
-      const result = await getTasks()
+      const result = await getTasks();
       expect(result).toEqual([mockTask]);
     });
 
@@ -24,7 +24,26 @@ describe('TaskService', () => {
         (axios.get as vi.Mock).mockRejectedValue(new Error('An internal servor error occured'));
 
       try {
-        await getTasks()
+        await getTasks();
+      } catch(e) {
+        expect(e).toEqual(new Error('An internal servor error occured'));
+      }
+    });
+  });
+
+  describe('getTask', () => {
+    it('should return the task by its id when the call succeed', async () => {
+      (axios.get as vi.Mock).mockResolvedValue({ data: mockTask });
+
+      const result = await getTask('task-id');
+      expect(result).toEqual(mockTask);
+    });
+
+    it('should throw an error when the call failed', async () => {
+        (axios.get as vi.Mock).mockRejectedValue(new Error('An internal servor error occured'));
+
+      try {
+        await getTask('task-id');
       } catch(e) {
         expect(e).toEqual(new Error('An internal servor error occured'));
       }

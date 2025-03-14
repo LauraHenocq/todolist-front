@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TaskView > render > should render 1`] = `
+"<div class="v-container v-locale--is-ltr">
+  <!--v-if-->
+  <div>
+    <!---->
+    <!---->
+    <p class="my-lg-8 my-4 text-lg-h4 text-h6 font-weight-medium">Détail d'une tâche</p>
+    <p class="my-lg-8 my-4 text-lg-h3 text-h5 font-weight-medium">Task Title</p><span class="v-chip v-theme--light bg-red v-chip--density-default v-chip--size-default v-chip--variant-flat" draggable="false"><!----><span class="v-chip__underlay"></span>
+    <!---->
+    <!---->
+    <div class="v-chip__content" data-no-activator="">A faire</div>
+    <!---->
+    <!----></span>
+    <p class="my-lg-8 my-4">Task Description</p>
+    <div class="v-container v-locale--is-ltr my-lg-8 my-4 text-center"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-pink v-btn--density-default v-btn--size-default v-btn--variant-elevated" data-cy="edit-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+        <!----><span class="v-btn__content" data-no-activator="">Modifier la tâche</span>
+        <!---->
+        <!---->
+      </button></div>
+  </div>
+</div>"
+`;
+
+exports[`TaskView > render > should show loading spinner when data is loading 1`] = `
+"<div class="v-container v-locale--is-ltr">
+  <!--v-if-->
+  <div>
+    <div class="v-progress-circular v-progress-circular--indeterminate v-theme--light v-progress-circular--size-default text-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100"><svg style="transform: rotate(calc(-90deg + 0deg));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.714285714285715 45.714285714285715">
+        <circle class="v-progress-circular__underlay" fill="transparent" cx="50%" cy="50%" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.66370614359172" stroke-dashoffset="0"></circle>
+        <circle class="v-progress-circular__overlay" fill="transparent" cx="50%" cy="50%" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.66370614359172" stroke-dashoffset="125.66370614359172px"></circle>
+      </svg>
+      <!---->
+    </div>
+  </div>
+</div>"
+`;

@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`EditTaskButton > render > should render 1`] = `
-"<div class="v-container v-locale--is-ltr"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-pink v-btn--density-default v-btn--size-default v-btn--variant-elevated"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+"<div class="v-container v-locale--is-ltr"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-pink v-btn--density-default v-btn--size-default v-btn--variant-elevated" data-cy="edit-task-button"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
     <!----><span class="v-btn__content" data-no-activator="">Modifier la tâche</span>
     <!---->
     <!---->

@@ -36,9 +36,9 @@ const createTask = (newTask: CreateTaskInput) => {
 </script>
 
 <template>
-  <v-dialog v-model="isDialogOpen" width="90%">
+  <v-dialog data-cy="task-creation-dialog" v-model="isDialogOpen" width="90%">
       <v-card title="Créer une nouvelle tâche">
-        <TaskForm ref="formRef" @createTask="createTask"/>
+        <TaskForm is-edition-mode="false" ref="formRef" @createTask="createTask"/>
 
         <v-card-actions>
           <v-spacer></v-spacer>
