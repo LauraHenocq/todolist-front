@@ -10,6 +10,7 @@ type Props = {
 const { isOpen } = defineProps<Props>()
 
 const formRef = ref(null);
+const isEditionMode = ref(false);
 const isDialogOpen = ref(isOpen);
 
 watch(() => isOpen, (newVal) => {
@@ -38,7 +39,7 @@ const createTask = (newTask: CreateTaskInput) => {
 <template>
   <v-dialog data-cy="task-creation-dialog" v-model="isDialogOpen" width="90%">
       <v-card title="Créer une nouvelle tâche">
-        <TaskForm is-edition-mode="false" ref="formRef" @createTask="createTask"/>
+        <TaskForm :is-edition-mode="isEditionMode" ref="formRef" @createTask="createTask"/>
 
         <v-card-actions>
           <v-spacer></v-spacer>
